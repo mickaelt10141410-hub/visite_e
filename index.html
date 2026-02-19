@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Documents - Visite d'Entreprise</title>
+<style>
+	*{
+    	marging : 2px ;
+        padding : 2px ;
+    }
+    
+	body{
+    	background-color : gray;
+        height : 100%;
+        min-width : 200 px ;
+    }
+    
+    #principale {
+    	background-color : cyan ;
+        height : 100%;
+        min-width : 200 px ;
+        display : none;
+        border : dashed 4px #008855 ;
+    }
+    
+    #principale:hover {
+    	background-color : white ;
+        transition: all 0.5s ease;
+        border : dashed 2px red ;
+    }
+    
+    #btn {
+        position: relative;
+        left: 30px;
+        width: 60px;
+        height : 50 px ;
+        transition: all 0.5s ease;
+    }
+
+    #btn:hover {
+        width: 70px;
+        height: 90px;
+        background-color: orange;
+        transform: translateX(20px);
+        left: 20px;
+        border-radius: 2rem;
+    }
+
+    
+    #btn_1 {
+    	position : absolute ;
+        left : 90px ;
+        width : 70px ;
+        background_color : yellow ;
+    }
+    #btn_1:hover {
+  		width: 50px;
+  		height: 90px;
+  		background-color: wheat ;
+  		transform: rotate(190 deg);
+        border-radius: 2rem;
+        transition: all 0.5s ease;
+
+    }
+    
+    #lien:hover{
+    	color : orange;
+    }
+    
+	.title{
+    	background-color : #ffff
+    }
+    .title:hover{
+    	background-color : rgba(250 210 40);
+    }
+    
+    div.Copy{
+    	position : relative ;
+        border : solid ;
+        display : flex ;
+        flex-dierction : right ;
+        BOTTOM : 50 px ;
+    }
+	
+</style>
+</head>
+<body >
+<div id = "principale">
+	<h4 class = "title">DOCUMENTS NECESSAIRES - VISITE D'ENTREPRISE</h4>
+
+	<hr>
+
+	<div id= "document_1" >
+		- INVISO GRP (docs) : <a id = "lien" href = "Inviso group">inviso 		document</a><br>
+		- BASAN GRP (docs) : <a id = "lien" href = "group Basan">basan 			document</a>
+	</div> 
+
+	<div id = "rse" >
+		- Rapport RSE INVISO (pdf) : <a id = "lien" href = "Rapport-RSE-		iNVISO-Web">RSE_Inviso</a><br>
+		- Rapport RSE LECOFRUIT (pdf) : <a id = "lien" href = "Rapport-			RSE-Lecofruit-2022">RSE_Lecofruit</a>
+	</div>
+
+	<div id = "convention" >
+		- Convention INVISO GRP et IECD (pdf): <a id = "lien" href = 		"Rapport-RSE-iNVISO-Web">Convention</a>
+	</div>
+
+	<div id = "copy">
+		<p class = "Copy">&copy;Mickaël-2026</p>
+	</div>
+</div>
+
+<button id = "btn" >Voir</button>
+<button id = "btn_1" hidden>Retour</button>
+
+<script>
+	document.getElementById("btn").addEventListener("click",show)
+    document.getElementById("btn_1").addEventListener("click",show_1)
+    function show() {
+    	x = document.getElementById("principale")
+        x.style.display="block"
+        document.getElementById("btn").style.display = "none"
+        document.getElementById("btn_1").style.display = "block"
+    }
+    
+    function show_1 () {
+    	x = document.getElementById("principale")
+        x.style.display="none"
+        document.getElementById("btn").style.display = "block"
+        document.getElementById("btn_1").style.display = "none"
+    }
+</script>
+
+</body>
+</html>
