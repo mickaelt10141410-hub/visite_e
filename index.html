@@ -72,6 +72,9 @@
 	#acceuil {
     	color : red;
 		display : block ;
+		position : relative;
+		left : 70% ;
+		bottom : 50% ;
     }
 	#acceuil:hover {
     	color : orange;
@@ -125,8 +128,8 @@
 	</div>
 </div>
 
-<div id = "acceuil">PREPA_VISITE _ 2026</div>
 <button id = "btn" >Voir</button>
+<div id = "acceuil">PREPA_VISITE _ 2026</div>
 <button id = "btn_1" hidden>Retour</button>
 
 <script>
@@ -137,6 +140,7 @@
         x.style.display="block"
         document.getElementById("btn").style.display = "none"
         document.getElementById("btn_1").style.display = "block"
+		document.getElementById("acceuil").style.display = "none"
     }
     
     function show_1 () {
@@ -144,6 +148,7 @@
         x.style.display="none"
         document.getElementById("btn").style.display = "block"
         document.getElementById("btn_1").style.display = "none"
+		
     }
 </script>
 
